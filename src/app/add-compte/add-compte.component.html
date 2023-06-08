@@ -1,0 +1,65 @@
+<div class="container-fluid agent">
+    <!-- nav bar -->
+    <app-nav-bar></app-nav-bar>
+    <!-- slide bar -->
+    <div class="container-fluid">
+        <div class="row no-gutters">
+            <div class="side col-12 col-md-2">
+                <app-nav-menu></app-nav-menu>
+            </div>
+            <div class="col-12 col-md-10">
+                <div class="content">
+                    <!--TODO your title -->
+                    <h2>Fill Client's Compte informations {{phoneNumber}}</h2>
+                    <div>
+                        <div class="content2">
+                            <div class="card text-center d-flex justify-content-center">
+                              <form class="form-card" #AgentAddForm="ngForm" (ngSubmit)="addCompteFormSubmited()">
+
+
+                                <div class="row justify-content-between text-left">
+                                  <div class="form-group col-sm-6 flex-column d-flex">
+                                    <label class="form-control-label px-3">Solde<span style="color: #fff"> *</span></label>
+                                 <input
+                                      type="text"
+                                      [(ngModel)]="solde"
+                                      #FirstName="ngModel"
+                                      id="fname"
+                                      name="fname"
+                                      placeholder="Enter Client Solde"
+                                      required
+                                   
+                                      class="form-control"
+                                    /> 
+                                  </div>
+
+                                  <div class="form-group col-sm-6 flex-column d-flex">
+                                    <label class="form-control-label px-3">Type de compte<span style="color: #fff"> *</span></label>
+                                    
+                                       
+                                      <select class="form-control" [(ngModel)]="typecompte" name="lname" id="lname">
+                                        <option value="500" >500</option>
+                                          <option value="1000">1000</option>
+                                          <option value="2000">2000</option>
+                                        </select>
+                                   
+                                  </div>
+                                
+                            </div>
+                                <div class="row justify-content-center">
+                                  <div class="form-group col-sm-6">
+                                    <button type="submit" class="cancel-agent-button">Add Client</button>
+                                  </div>
+                                  <div *ngIf="compteAdded" class="alert alert-success">Le client a été ajouté avec succès.</div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                          
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

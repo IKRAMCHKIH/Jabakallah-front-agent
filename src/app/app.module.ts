@@ -20,6 +20,8 @@ import { AgentHomeComponent } from './agent-home/agent-home.component';
 import { AgentProfilComponent } from './agent-profil/agent-profil.component';
 import { ListCourrierComponent } from './list-courrier/list-courrier.component';
 import { LivraisonFormComponent } from './livraison-form/livraison-form.component';
+import { AddCompteComponent } from './add-compte/add-compte.component';
+import { UpdateSoldeComponent } from './update-solde/update-solde.component';
 
 
 @NgModule({
@@ -38,6 +40,8 @@ import { LivraisonFormComponent } from './livraison-form/livraison-form.componen
         AgentHomeComponent,
         AgentProfilComponent,
         LivraisonFormComponent,
+        AddCompteComponent,
+        UpdateSoldeComponent,
        
     ],
     imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule, BrowserAnimationsModule, ReactiveFormsModule, ToastrModule.forRoot()],

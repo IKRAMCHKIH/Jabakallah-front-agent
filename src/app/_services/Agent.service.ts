@@ -40,6 +40,23 @@ export class AgentService {
 		{responseType: 'text'}
 		);
 	}
+	public saveCompte(
+		
+		numTel:String,
+		typecompte:number,
+		solde:number,
+	
+		
+		) {
+			return this.http.post(this.agentUrl + 'createbankAccount',
+			 {
+				typecompte,numTel,solde
+			},
+			
+			{responseType: 'text'}
+			);
+		}
+
 
 	public updateAgent(ref:String, state:String){
 
@@ -103,6 +120,11 @@ public GetListVirement(
   ) :Observable<any[]>{
    console.log("j'ai entré paid");
    return this.http.get<any[]>(this.clientUrlVirement+`listviremetAgent/${adresse}`,httpOptions);
+  }
+
+  public updateSold(numTel: string, solde: number) {
+	console.log("updateSold");
+	return this.http.post(this.agentUrl + 'updateSold?numTel=' + numTel + '&solde=' + solde, {});
   }
   public saveVirement(
 

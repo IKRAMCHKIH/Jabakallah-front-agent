@@ -25,6 +25,17 @@
           <i class="fas fa-calendar fa-fw mr-3"></i>Add Client
           <span class="sr-only"></span>
         </a>
+        <a
+        class="nav-item active"  *ngIf="isLoggedIn"
+       routerLink="/solde"
+       ariaCurrentWhenActive="page"
+       routerLinkActive="active"
+       class="list-group-item list-group-item-action py-3"
+       aria-current="true"
+       >
+       <i class="fa-solid fa-money-bill-1-wave mr-3" style="color: #0c0d0d;"></i>Add Solde
+         <span class="sr-only"></span>
+       </a>
         <!-- Todo Add Route -->
         <a
         class="nav-link"

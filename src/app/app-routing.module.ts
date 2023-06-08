@@ -11,6 +11,8 @@ import { AgentListComponentComponent } from './agent-list-component/agent-list-c
 import { AgentProfilComponent } from './agent-profil/agent-profil.component';
 import { ListCourrierComponent } from './list-courrier/list-courrier.component';
 import { LivraisonFormComponent } from './livraison-form/livraison-form.component';
+import { AddCompteComponent } from './add-compte/add-compte.component';
+import { UpdateSoldeComponent } from './update-solde/update-solde.component';
 
 const routes: Routes = [
     // { path: '', component: HomeComponent },
@@ -24,7 +26,9 @@ const routes: Routes = [
     { path: 'home', component: AgentHomeComponent },
     { path: 'client-list', component: AgentListComponentComponent },
     { path: 'profil', component: AgentProfilComponent },
-    { path: 'livraison', component: LivraisonFormComponent }
+    { path: 'livraison', component: LivraisonFormComponent },
+    { path: 'compte', component: AddCompteComponent },
+    { path: 'solde', component: UpdateSoldeComponent }
 ];
 
 @NgModule({

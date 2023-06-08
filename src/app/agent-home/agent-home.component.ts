@@ -4,6 +4,7 @@ import { AgentService } from '../_services/Agent.service';
 import { Client } from 'src/app/interfaces/Client';
 import { TokenStorageService } from '../_services/token-storage.service';
 import {Agent} from './../interfaces/Agent';
+const AgentHasntChangedPassword = false;
 
 @Component({
   selector: 'app-agent-home',
@@ -11,7 +12,8 @@ import {Agent} from './../interfaces/Agent';
   styleUrls: ['./agent-home.component.css']
 })
 export class AgentHomeComponent implements OnInit {
-  
+  username=window.sessionStorage.getItem("username");
+  AgentHasFirstAuthentication :Boolean;
   clients:Client[];
   errorMessage: any;
   numberOfLines: number;
@@ -24,6 +26,18 @@ export class AgentHomeComponent implements OnInit {
     if(this.tokenStorage.getToken()==null){
       this.router.navigate(['login']);
     }else{
+      this.AgentService.getAgentHasFirstAuth(this.username).subscribe({
+        next: data => {
+          console.log(data);
+          if(data==AgentHasntChangedPassword){
+            this.router.navigate(['changePassword']); 
+          }
+        
+        },
+        error: err => {
+          console.log("erreur while getting firstauth")
+        }
+      });
       this.AgentService.findAllClient().subscribe({
         next: data => {
           this.clients=data;

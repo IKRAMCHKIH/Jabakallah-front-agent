@@ -1,7 +1,7 @@
 import { TokenStorageService } from './../_services/token-storage.service';
 import { AgentService } from './../_services/Agent.service';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router , NavigationExtras } from '@angular/router';
 
 const AgentHasntChangedPassword = false;
 @Component({
@@ -64,22 +64,30 @@ export class AddClientFormComponent implements OnInit {
       ).subscribe(
         {
           next: data => {
-            this.reloadPage();
           },
           error: err => {
             this.errorMessage = err.error.message;
             console.log(err.error.message);
-          6
+          
           }
          
         }
       )
+
+       const navigationExtras: NavigationExtras = {
+         state: {
+          phoneNumber: this.client.phoneNumber,
+         },
+       };
+      // this.router.navigate(['clientHome/recharge/form'], navigationExtras);
+      // console.log('clicked');
+
+      this.router.navigate(['/compte'], navigationExtras);
       this.clientAdded = true;
   }
 
-  reloadPage(): void {
-    window.location.reload();
+//   reloadPage(): void {
 
 
-}
+// }
   }

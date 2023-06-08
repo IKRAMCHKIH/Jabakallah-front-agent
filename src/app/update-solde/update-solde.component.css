@@ -1,0 +1,130 @@
+body{
+    color: #ffffff;
+    overflow-x: hidden;
+    height: 100%;
+    background-image: url("https://i.imgur.com/GMmCQHC.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%
+}
+    
+    
+    .card{
+        padding: 50px 40px;
+        margin-bottom: 20px;
+        margin-left: 150px;
+        margin-right: 150px;
+        color: #ffffff;
+        border: none !important;
+        border-radius: 23px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+               background: rgb(254, 130, 43);
+        background: linear-gradient(
+          36deg,
+          rgba(254, 130, 43, 1) 0%,
+          rgba(210, 89, 4, 1) 100%
+        );
+     
+    
+    }
+
+    .formContainer{
+        position: absolute;
+        top:20% ;
+        right: 1%;
+    }
+    
+    
+    .blue-text{
+        color: #00BCD4
+    
+    }
+    .form-control-label{
+        margin-bottom: 3px;
+        margin-top: 3px
+    }
+    
+    input, textarea, button{padding: 8px 15px;
+        border-radius: 5px !important;
+        margin: 5px 0px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        font-size: 18px !important;
+        font-weight: 300}
+        
+        input:focus, textarea:focus{
+            -moz-box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            border: 1px solid #00BCD4;
+            outline-width: 0;
+            font-weight: 400}
+            
+            .btn-block{
+                text-transform: uppercase;
+                font-size: 15px !important;
+                font-weight: 400;
+                height: 43px;
+                cursor: pointer
+            
+            }.btn-block:hover{
+                color: #fff !important
+            
+            }
+            
+            button:focus{-moz-box-shadow: none !important;
+                -webkit-box-shadow: none !important;
+                box-shadow: none !important;
+                outline-width: 10
+            }
+            
+.mainContainer{
+  
+    height: 100% !important;
+    width: 100% !important;
+    
+}
+
+.main-layout{
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.main{
+    height: 100% !important;
+    width: 100% !important;
+     
+        align-content: center;
+        background-image: url("src\assets\images\background.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100% !important;
+    }
+
+
+body {
+    background-color: #fbfbfb;
+  
+    }
+    @media (min-width: 991.98px) {
+    main {
+    padding-left: 240px;
+    }
+    }
+    .container-fluid {
+        padding: 0% 0% 7%;
+      }
+      .col {
+        margin: 0% !important;
+        padding: 0% !important;
+      }
+      .content {
+        padding: 5%;
+        text-align: left;
+      }
+      .content2 {
+        padding-top: 4%;
+      }
+      
+    h2{
+         text-align: center;
+    }

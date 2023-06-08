@@ -1,0 +1,87 @@
+<div class="container-fluid agent">
+    <!-- nav bar -->
+    <app-nav-bar></app-nav-bar>
+    <!-- slide bar -->
+    <div class="container-fluid">
+        <div class="row no-gutters">
+            <div class="side col-12 col-md-2">
+                <app-nav-menu></app-nav-menu>
+            </div>
+            <div class="col-12 col-md-10">
+                <div class="content">
+                    <!--TODO your title -->
+                    <h2>Fill Client's personal information</h2>
+                    <div>
+                        <div class="content2">
+                            <div class="card text-center d-flex justify-content-center">
+                                <form class="form-card" #AgentAddForm="ngForm" (ngSubmit)="addClientFormSubmited()">
+                                    <div class="row justify-content-between text-left">
+                                        <div class="form-group col-sm-6 flex-column d-flex">
+                                            <label class="form-control-label px-3">Numero Telephone <span style="color: #fff"> *</span></label>
+
+                                            <input
+                                                type="text"
+                                                [(ngModel)]="numTel"
+                                                #FirstName="ngModel"
+                                                id="fname"
+                                                name="fname"
+                                                placeholder="Enter your first name"
+                                                required
+                                                
+                                            />
+                                        </div>
+
+                                        <div class="form-group col-sm-6 flex-column d-flex">
+                                            <label class="form-control-label px-3">Sold <span style="color: #fff">*</span></label>
+
+                                            <input
+                                                type="number"
+                                                [(ngModel)]="solde"
+                                                #LastName="ngModel"
+                                                id="lname"
+                                                name="lname"
+                                                placeholder="Enter your last name"
+                                                required
+                                                
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-between text-left">
+                                        <div class="form-group col-sm-6 flex-column d-flex">
+                                            <div *ngIf="FirstName.touched && !FirstName.valid">
+                                                <div class="alert alert-danger" *ngIf="FirstName.errors && FirstName.errors.required">
+                                                    Numero Telephone Field is required
+                                                </div>
+                                                <div class="alert alert-danger" *ngIf="FirstName.errors && FirstName.errors.pattern">
+                                                    Invalid Format for Numero Telephone
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-6 flex-column d-flex">
+                                            <div *ngIf="LastName.touched && !LastName.valid">
+                                                <div class="alert alert-danger" *ngIf="LastName.errors && LastName.errors.required">
+                                                    Sold Field is required
+                                                </div>
+                                                <div class="alert alert-danger" *ngIf="LastName.errors && LastName.errors.pattern">
+                                                    Invalid Format for Sold
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+
+                                    <div class="row justify-content-center">
+                                        <div class="form-group col-sm-6">
+                                            <button type="submit" class="cancel-agent-button">Add Solde</button>
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

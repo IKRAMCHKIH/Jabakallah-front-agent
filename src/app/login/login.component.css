@@ -1,8 +1,8 @@
 .card-login {
     border: 2px solid #e8ebf1;
     border-radius: 30px;
-    background: rgb(231, 70, 70);
-    background: linear-gradient(36deg, rgba(231, 70, 70, 1) 0%, rgba(255, 122, 122, 1) 100%);
+    background: rgba(254, 130, 43, 1) 0%,;
+    background: linear-gradient(36deg,rgba(254, 130, 43, 1) 0%,  rgba(210, 89, 4, 1) 100%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.18);
 }
 
