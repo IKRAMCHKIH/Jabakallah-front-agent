@@ -1,0 +1,79 @@
+<!-- Sidebar -->
+<nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+    <div class="position-sticky">
+      <div class="list-group list-group-flush">
+        <a
+        class="nav-link" 
+        routerLink="/home"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          class="list-group-item list-group-item-action py-3"
+          aria-current="true"
+        >
+        <i class="fa-solid fa-house mr-3" style="color: #1b1c1d;"></i>Home
+          <span class="sr-only">(current)</span>
+        </a>
+        <!-- Todo Add Route -->
+        <a
+         class="nav-item active"  *ngIf="isLoggedIn"
+        routerLink="/addClient"
+        ariaCurrentWhenActive="page"
+        routerLinkActive="active"
+        class="list-group-item list-group-item-action py-3"
+        aria-current="true"
+        >
+          <i class="fas fa-calendar fa-fw mr-3"></i>Add Client
+          <span class="sr-only"></span>
+        </a>
+        <!-- Todo Add Route -->
+        <a
+        class="nav-link"
+        class="nav-item active" 
+         *ngIf="isLoggedIn"
+          routerLink="/client-list"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          class="list-group-item list-group-item-action py-3"
+        >
+        <i class="fa-solid fa-people-group mr-3"></i>Client List 
+        </a>
+      
+
+        <a
+        class="nav-link"
+        class="nav-item active" 
+         *ngIf="isLoggedIn"
+          routerLink="/livraison"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          class="list-group-item list-group-item-action py-3"
+        >
+        
+        <i class="fa-solid fa-truck fa-fw mr-3"></i>livraison 
+        </a>
+        <a
+        class="nav-link"
+        class="nav-item active" 
+         *ngIf="isLoggedIn"
+          routerLink="/listcourrier"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          class="list-group-item list-group-item-action py-3"
+>
+        <i class="fa-solid fa-people-carry-box mr-3"></i>Courrier
+        </a>
+        <a
+        class="nav-link"
+        class="nav-item active" 
+         *ngIf="isLoggedIn"
+          routerLink="/terms"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          class="list-group-item list-group-item-action py-3"
+        >
+        <i class="fa-solid fa-shield-halved mr-3"></i>Items 
+        </a>
+      </div>
+    </div>
+  </nav>
+  

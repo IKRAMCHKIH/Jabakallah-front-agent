@@ -1,0 +1,12 @@
+@media (min-width: 991.98px) {
+    main {
+      padding-left: 240px;
+    }
+  }
+  
+  .navbar-brand {
+    font-family: "Ubuntu";
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  

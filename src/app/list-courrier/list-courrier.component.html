@@ -1,0 +1,71 @@
+<div class="container-fluid agent">
+    <!-- nav bar -->
+    <app-nav-bar></app-nav-bar>
+    <!-- slide bar -->
+    <div class="container-fluid">
+      <div class="row no-gutters">
+        <div class="side col-12 col-md-2">
+          <app-nav-menu></app-nav-menu>
+        </div>
+        <div class="col-12 col-md-10">
+          
+
+            <div class="content">
+                <h2>Liste de courrier Disponible</h2>
+                <div class="content2">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="search-bar">
+                        <input type="text" [(ngModel)]="searchTerm" placeholder="Rechercher par référence" (input)="updateFilteredList()">
+                        <i class="fa fa-search"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                  <br>
+                </div>
+              
+                <div class="row d-flex justify-content-center">
+                  <div class="col-11">
+                    <table class="table shadow table-hover">
+                      <thead class="thead">
+                        <tr>
+                          <th>#</th>
+                          <th>Reference</th>
+                          <th>Date-Envoie</th>
+                          <th>Source</th>
+                          <th>Destination</th>
+                          <th>Objet</th>
+                          <th>CIN</th>
+                          <th>Ownerphone</th>
+                          <th>Statut</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let virement of filterVirements(); let i = index">
+                          <td>{{i+1}}</td>
+                          <td>{{virement.ref}}</td>
+                          <td>{{virement.date_virement}}</td>
+                          <td>{{virement.ribsource}}</td>
+                          <td>{{virement.ribdest}}</td>
+                          <td>{{virement.montant}}</td>
+                          <td>{{virement.cin}}</td>
+                          <td>{{virement.ownerphone}}</td>
+                          <td>
+                            <select [(ngModel)]="virement.state">
+                              <option value="En cours" [style.background-color]="'yellow'">En cours</option>
+                              <option value="Bien reçu" [style.background-color]="'green'">Bien reçu</option>
+                            </select>
+                          </td>
+                          <td>
+                            <button class="save" (click)="saveVirement(virement)"><i class="fa-solid fa-bookmark" style="color: #787c82;"></i></button>
+                            <button class="delete" (click)="deleteVirement(virement)"><i class="fa-solid fa-trash" style="color: #ba1717;"></i></button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              

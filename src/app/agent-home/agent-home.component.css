@@ -1,0 +1,65 @@
+.container-fluid {
+    padding: 0% 0% 7%;
+}
+.col {
+    margin: 0% !important;
+    padding: 0% !important;
+}
+.content {
+    padding: 5%;
+    text-align: left;
+}
+.content2 {
+    padding-top: 4%;
+    text-align: center;
+}
+
+.welcome-container {
+    display: flex;
+
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+
+    background: rgb(231, 70, 70);
+    background: linear-gradient(36deg, rgba(231, 70, 70, 1) 0%, rgba(252, 120, 120, 1) 100%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.18);
+}
+
+h1 {
+    color: #000000;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.agent-name {
+    font-weight: bold;
+}
+
+p {
+    color: #070707;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+.grey-bg {
+    background-color: #f5f7fa;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.column {
+    flex-basis: 50%;
+}
+h1 {
+    align-items: center;
+}

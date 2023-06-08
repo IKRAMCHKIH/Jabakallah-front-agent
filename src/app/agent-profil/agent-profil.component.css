@@ -1,0 +1,62 @@
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #0ea293;
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: rgb(254, 130, 43);
+  background: linear-gradient(
+    36deg,
+    rgba(254, 130, 43, 1) 0%,
+    rgba(210, 89, 4, 1) 100%
+  );
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right bottom, #0ea293)
+  }
+  
+ .card-body{
+  text-align: left !important;
+ }
+.background-radial-gradient {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(218, 41%, 15%);
+  background-image: radial-gradient(650px circle at 0% 0%,
+      hsl(218, 41%, 35%) 15%,
+      hsl(218, 41%, 30%) 35%,
+      hsl(218, 41%, 20%) 75%,
+      hsl(218, 41%, 19%) 80%,
+      transparent 100%),
+    radial-gradient(1250px circle at 100% 100%,
+      hsl(218, 41%, 45%) 15%,
+      hsl(218, 41%, 30%) 35%,
+      hsl(218, 41%, 20%) 75%,
+      hsl(218, 41%, 19%) 80%,
+      transparent 100%);
+}
+
+.profilecard{
+  margin-left: 20%;
+}
+
+
+.profile-info {
+  margin-top: 20px;
+}
+
+.profile-info > div {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.profile-info label {
+  font-weight: bold;
+  width: 100px;
+}
+
+.profile-info span {
+  margin-left: 10px;
+}
+.container-fluid {
+  padding: 0% 0%;
+}

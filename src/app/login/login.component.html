@@ -1,0 +1,95 @@
+<section class="white-section loginContainer" id="loginPage">
+     
+    <div class="page-wrapper full-page">
+        <div class="container-fluid">
+
+            <div class="page-content d-flex align-items-center justify-content-center">
+               
+         
+            <div class="row w-100 mx-0 auth-page">
+                <div class="col-md-6 col-xl-5 mx-auto">
+                    <div class="card card-login">
+                    <div class="row">
+                    <div class="col-md-12">
+                     <div  class="auth-form-wrapper py-5"  style="padding-left: 2.5rem; padding-right: 2.5rem"> 
+                    <a class="h4" style="color: #fff">JabkLah.com</a>
+                    <p class="" style="color: #e8e8e8">
+                        Welcome! Log in to your account.
+                    </p>
+
+                <form [formGroup]="insertForm" (ngSubmit)="submitAdminLogInForm()">
+                    <div class="alert alert-danger" role="alert" *ngIf="successMessage">
+                        {{ successMessage }}
+                    </div>
+                    <div class="alert alert-danger" role="alert" *ngIf="errorMessage">
+                        {{ errorMessage }}
+                    </div>
+                    <div class="alert alert-danger" role="alert" *ngIf="">
+                        email is required
+                    </div>
+                    <div class="alert alert-danger" role="alert" *ngIf="">
+                        password is required
+                    </div>
+                     <div class="form-group">
+                   
+                    
+                        <input
+                            formControlName="Username"
+                            type="text"
+                            class="form-control"
+                            placeholder="email"
+                            autofocus
+                            required
+                        />
+                    </div>
+
+                    <div class="form-group">
+                       
+                        <input
+                            formControlName="Password"
+                            type="password"
+                            class="form-control"
+                            placeholder="password"
+                            required
+                        />
+                    </div>
+                   
+                    <div class="form-group">
+                        <button
+                            type="submit"
+                            value="Login"
+                            class="btn btn-outline-light"
+                           style="border-radius: 1rem"
+                        ><i class="fa fa-spinner fa-spin" ></i>Login
+                        </button>
+
+                        <a class="" [routerLink]="['/forgot-password']" style="float: right; border-radius: 1rem; color: #fff"><small>forget
+                          password</small>
+                        </a>
+                        
+                    </div>
+
+                    <div id="errors">
+                        <div
+                            *ngIf="Username.touched && Username.errors"
+                            class="errorMessage"
+                        >
+                            <span *ngIf="Username.hasError('required')"
+                                >Username is required.</span
+                            >
+                        </div>
+                        <div
+                            *ngIf="Password.touched && Password.errors"
+                            class="errorMessage"
+                        >
+                            <span *ngIf="Password.hasError('required')"
+                                >Password is required.</span
+                            >
+                        </div>
+                    </div>
+                </form>
+            </div>
+           
+        </div>
+    </div>
+</div>
